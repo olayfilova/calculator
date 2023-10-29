@@ -36,10 +36,10 @@ try:
             print("Result: ")
             print(result)
 
-            var_3 = False
-        ######!!!! ТУТ ДАЛЬШЕ НЕ ЗНАЮ КАК ВЕРНУТЬ К var_3 !!!!!!
         else:
-            print("Operators should be choosen 1 or 2 or 3 or 4.\nOnly digits, NO SPACE\n")
+            if not var_3 == "1" or not var_3 == "2" or not var_3 == "3" or not var_3 == "4":
+                print("Operators should be chosen 1 or 2 or 3 or 4.\nOnly digits, NO SPACE\n")
+        ######!!!! ТУТ ДАЛЬШЕ НЕ ЗНАЮ КАК ВЕРНУТЬ К var_3 !!!!!
             break
 
 except ZeroDivisionError:
