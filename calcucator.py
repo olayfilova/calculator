@@ -1,39 +1,48 @@
 try:
-  var_1 = input("Please type a number:")
-# it_true = True
-  while var_1.isnumeric() is not True:
-   print("Only digits, please\n Example:123")
-   break
+    var_1 = False
+    while not var_1:
+        var_1 = input("Please type a number:")
+        if not var_1.isnumeric():
+            var_1 = False
+            print("Only digits, please. NO SPACE\n Example:123")
+        else:
+            break
+    var_2 = False
+    while not var_2:
+        var_2 = input("Second number:")
+        if not var_2.isnumeric():
+            var_2 = False
+            print("Only digits, please. NO SPACE\n Example:123")
+        else:
+            break
 
-# Коля, крутила и не все равно поняла, как остановить и вернуть пользователя к var_1 & var_2, соответственно.
-# Сорри.
-# Мастер , подскажи :)
+    var_3 = False
+    while not var_3:
+        var_3 = input("Choose operation: \n 1 '+'\n 2 '-'\n 3 '*'\n 4 '/'")
+        if var_3 == "1":
+            result = float(var_1) + float(var_2)
+            print("Result: ")
+            print(result)
+        elif var_3 == "2":
+            result = float(var_1) - float(var_2)
+            print("Result: ")
+            print(result)
+        elif var_3 == "3":
+            result = int(var_1) * float(var_2)
+            print("Result: ")
+            print(result)
+        elif var_3 == "4":
+            result = float(var_1) / float(var_2)
+            print("Result: ")
+            print(result)
 
+            var_3 = False
+        ######!!!! ТУТ ДАЛЬШЕ НЕ ЗНАЮ КАК ВЕРНУТЬ К var_3 !!!!!!
+        else:
+            print("Operators should be choosen 1 or 2 or 3 or 4.\nOnly digits, NO SPACE\n")
+            break
 
-  var_2 = input("Please type another number:")
-  while var_2.isnumeric() is not True:
-      print("Only digits, please\n Example:123")
-      break
-
-  var_3 = input("Choose operation: \n 1 '+'\n 2 '-'\n 3 '*'\n 4 '/'")
-  if var_3 == "1":
-    result = float(var_1) + float(var_2)
-    print("Result: ")
-    print(result)
-  if var_3 == "2":
-    result = float(var_1) - float(var_2)
-    print("Result: ")
-    print(result)
-  if var_3 == "3":
-     result = int(var_1) * float(var_2)
-     print("Result: ")
-     print(result)
-  if var_3 == "4":
-    result = float(var_1) / float(var_2)
-    print("Result: ")
-    print(result)
-    ## 0,word,type,minus, empty row #### if except --------- пустота
 except ZeroDivisionError:
-      print("Can't be divided on 0")
+    print("Can't be divided on 0")
 except ValueError:
-  print("Sorry, server out of order now")
+    print("Sorry, server out of order now")
