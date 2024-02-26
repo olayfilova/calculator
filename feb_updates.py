@@ -156,3 +156,149 @@ for i in str_1 and str_2:
     if i in str_1 and str_2 and str_1.count(i) == 1 and str_2.count(i) == 1:
         new_list.append(i)
 print(new_list)
+
+
+my_list = ["Beneficiaries who are not selected", "400", "Notification: Selected beneficiaries will be notified of their selection ", "401", 'This policy was approved', 'Criteria for Selection:']
+new_list = []
+print(new_list)
+
+for j, k in enumerate(my_list):
+    if j % 2 == 1:
+        new_list.append(k[::-1])
+    else:
+        new_list.append(k)
+print(new_list)
+
+for j, k in enumerate(my_list):
+    if j % 2 == 1:
+        rev_str = k[::-1]
+        new_list.append(rev_str)
+    else:
+        new_list.append(k)
+print(new_list)
+
+
+my_list = ["abc", "bca", "adv", "dva"]
+new_list = [i for i in my_list if i.startswith("a")]
+print(new_list)
+
+
+my_list = ["abc", "bca", "adv", "dva"]
+new_list = [i for i in my_list if i[0] == "a"]
+print(new_list)
+
+
+my_list = ["abc", "bca", "adv", "dva"]
+for i in my_list:
+    if i.startswith("a"):
+        new_list.append(i)
+print(new_list)
+
+
+my_list = ["abc", "bca", "adv", "dva"]
+for i in my_list:
+    if i[0] == "a":
+        new_list.append(i)
+print(new_list)
+
+
+my_list = ["hjk", "abc", "bca", "adv", "dva"]
+new_list = []
+
+for i in my_list:
+    if "a" in i:
+        new_list.append(i)
+print(new_list)
+
+
+
+
+{1:1, 2:2}, {11:11, 2:22} ---> {1:1, 11:11, 2:[2, 22]}
+
+my_dict = {"key": "value",
+           "address": "Dublin",
+           "city": "Dublin",
+           }
+
+for i in my_dict:
+    print(i)
+
+for i, k in enumerate(my_dict):
+    print(i, k)
+
+for i in my_dict.items():
+    print(i)
+
+print(my_dict.keys())
+print(my_dict.values())
+
+person = dict()
+
+person["name"] = "Daniel"
+person["age"] = "21"
+
+print(person)
+
+
+person_1 = dict()
+
+person_1["name"] = "John"
+person_1["age"] = "21"
+
+print(person_1)
+
+
+person_2 = dict()
+
+person_2["name"] = "Kelvin"
+person_2["age"] = "21"
+
+print(person_2)
+
+print(person_2.get("age", False))
+print(person_2.get("email", False))
+
+
+checkin
+if "city" not in person_2:
+    print("You have to type your city.")
+
+
+from random import randint
+
+res = randint(1, 5)
+
+dict_1 = {1: "5",
+        2: "6",
+        3: "7",
+        4: "8",
+        5: "9",
+        }
+
+print(dict_1[res])
+
+alf_dict ={}
+
+# alf_dict[chr()]= "97"
+# print(alf_dict)
+
+for key in range(ord("a"), ord("z")+1):
+        print(key)
+
+
+alfa_dict = {}
+
+for i in range(ord("a"), ord("z")):
+    alfa_dict[i] = chr(i)
+
+print(alfa_dict)
+
+alfa_dict_2 = {}
+
+for i in alfa_dict:
+    alfa_dict_2[alfa_dict[i]] = i
+print(alfa_dict_2)
+
+for i, k in alfa_dict.items():
+    alfa_dict_2[k] = i
+print(alfa_dict_2)
